@@ -1,0 +1,166 @@
+:root{
+    --primary-color: #1313B3;
+    --secondary-color:  rgba(22, 21, 21, 0.781);
+    --accent1-color: #FFFF00;
+    --heading-font: "Times New Roman", "Georgia", sans-serif;
+    --body-font: Arial, Helvetica,sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+h1{
+    font-family: var(--heading-font);
+    color:white;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: #0b0b64d7;
+    text-align: center;
+    opacity: 1;
+}
+
+h2, footer{
+    margin-top: 5px;
+    text-align: center;
+    background-color: #0b0b64d7;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    
+  }
+
+
+.yellow{
+    color:var(--accent1-color)
+}
+
+nav{
+    background-color: var(--secondary-color);
+    margin: 0 auto;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    text-decoration: none;
+    
+    
+}
+
+nav a:hover{
+    border:5px solid #fff;
+}
+
+.active{
+    color: yellow;
+}
+
+nav a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: larger;
+    
+}
+
+main{
+    margin: 2rem auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 400px 200px;
+    gap: 1.5rem;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap:20px;
+    margin-top: 15px;
+}
+.card1{
+    background-color: white;
+    padding: 30px;    
+    width: 100%;
+    margin: 0 auto;
+    border-radius:2rem;
+    border: 1px solid rgb(194, 182, 182);
+
+        }
+
+.card2 {
+    background-color: white;
+    padding: 30px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 2rem;
+    border: 1px solid rgb(194, 182, 182);
+    
+
+}
+
+.card1 img{
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    float: right;
+    clear: both;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+figure{
+    float: left;
+    margin: 20px;
+}
+
+p{
+    font-size: larger;
+    text-align: justify;
+    padding: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.underline-full {
+            position: relative;
+            margin-top: 70px;
+            margin-bottom: 10px;
+            font-family: var(--heading-font);
+            text-align: center;
+            font-size: 30px;
+            border-bottom: 3px solid rgba(32, 27, 27, 0.781);
+            padding-bottom: 5px;
+            width: 70%;
+        
+}
+
+h3{
+    font-size: larger;
+}
+
+.card2 ul{
+    margin-top: 150px;
+    margin-left: 30px;
+    padding: 50px;
+    font-size: larger;
+}
+
+figcaption{
+    text-align: center;
+}
+
+footer {
+    font-size: larger;
+    text-align: center;
+    background-color: #0b0b64d7;
+    color: white;
+    padding: 10px;
+}
