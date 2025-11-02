@@ -86,7 +86,16 @@ main {
     padding: 10px;
     margin-left: 50px;
 }
+.card ul{
+    font-size: larger;
+    padding: 50px;
+    margin-top:150px;
+    margin-left: 50px;
+}
 
+.card a{
+    padding: 50px;
+}
 
 figure {
     float: left;
