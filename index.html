@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,20 @@
     <title>WDD 131 - Dynamic Web Fundamentals - Asa Eyo Itam-Eyo</title>
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals Home page - Asa Eyo Itam-Eyo">
     <meta name="author" content="Asa Eyo Itam-Eyo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
-    <script src= "getdates.js" defer></script>
-</head>
+    <script src="scripts/getdates.js" defer></script>
 
 <body>
     <header>
-        <h1>WDD 131 - Dynamic Web Fundamentals - <span class="yellow">Asa Eyo Itam-Eyo</span></h1>
+        <h1>
+            <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span> - 
+            <span class="yellow">Asa Eyo Itam-Eyo</span>
+        </h1>
         <nav>
             <ul>
                 <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
@@ -21,16 +28,17 @@
                 <li><a
                         href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a>
                 </li>
-                <li><a href="#">Final Project</a></li>
+                <li><a href="https://placeholder.com">Final Project</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <!-- About Me Section -->
-        <section class="card1">
+        <section class="card">
             <h2>About Me</h2>
             <img src="images/asaeyo.jpg" alt="Asa Eyo" width="300" height="200">
+    
             <p>
                 My name is Asa Itam-Eyo and I go by Asa. I was born in Nigeria and live with my family in Calabar, a
                 city in Cross River State, Nigeria.
@@ -38,31 +46,29 @@
                 my world and I enjoy every
                 moment spent with them. I love to read, travel, and learn new things.
             </p>
-
+    
             <h3 class="underline-full">Cross River State, Nigeria</h3>
-
+    
             <figure>
                 <img src="images/nigeriaflag.jpg" alt="Nigerian Flag" width="300" height="200">
                 <figcaption>Official flag of Nigeria</figcaption>
             </figure>
-
+    
             <p>
-                Nigeria,  is a country in West Africa. It is situated between
-                the
-                Sahel to the north and the Gulf of Guinea in the Atlantic Ocean to the south. With a population of more
-                than 230 million, it is the most populous country in Africa,
+                Nigeria is a country in West Africa. It is situated between
+                the Sahel to the north and the Gulf of Guinea in the Atlantic Ocean to the south. With a population of more
+                than 230 million, it is the most populous country in Africa
                 and the world's sixth-most populous country. Nigeria borders Niger in the north, Chad in the northeast,
-                Cameroon in the
-                east, and Benin in the west. Nigeria is a federal republic comprising 36 states and the Federal Capital
+                Cameroon in the east, and Benin in the west. Nigeria is a federal republic comprising 36 states and the
+                Federal Capital
                 Territory,
                 where its capital, Abuja, is located. The largest city in Nigeria by population is Lagos, one of the
-                largest metropolitan
-                areas in the world and the largest in Africa.
+                largest metropolitan areas in the world and the largest in Africa.
             </p>
         </section>
-
+    
         <!-- Web Development Resources Section -->
-        <section class="card2">
+        <section class="card">
             <h2>Web Dev Resources</h2>
             <ul>
                 <li><a href="https://dev.to/">Dev.to Community</a></li>
@@ -74,6 +80,7 @@
             </ul>
         </section>
     </main>
+
 
     <footer>
         <p>

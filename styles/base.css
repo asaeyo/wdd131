@@ -1,78 +1,66 @@
-:root{
+:root {
     --primary-color: #1313B3;
-    --secondary-color:  rgba(8, 3, 3, 0.863);
+    --secondary-color: rgba(30, 30, 30, 0.95);
     --accent1-color: #FFFF00;
-    --heading-font: "Times New Roman", "Georgia", sans-serif;
-    --body-font: Arial, Helvetica,sans-serif;
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
 }
 
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-h1{
+header{
+    position: relative;
+}
+
+h1 {
     font-family: var(--heading-font);
-    color:white;
+    color: white;
     padding: 20px;
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
     background-color: #0b0b64d7;
     text-align: center;
-    opacity: 1;
+     
 }
 
-h2{
+h2 {
     margin-top: 5px;
     text-align: center;
     background-color: #0b0b64d7;
     color: white;
-    width: 100%;
     padding: 10px;
-    
-  }
-
-
-.yellow{
-    color:var(--accent1-color)
 }
 
-nav{
+/* Highlight color */
+.yellow {
+    color: var(--accent1-color);
+}
+
+/* Navigation */
+nav {
     background-color: var(--secondary-color);
-    margin: 0 auto;
 }
 
-nav ul{
+nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     padding: 1rem;
-    text-decoration: none;
-    
-    
 }
 
-nav a:hover{
-    border:2px solid #fff;
-    color: var(--accent1-color);
-}
-
-.active{
-    color: yellow;
-}
-
-nav a{
-    display: block;
+nav a {
     color: #fff;
-    text-align: center;
     text-decoration: none;
     font-size: larger;
-    
 }
 
+nav a:hover {
+    border: 2px solid #fff;
+    color: var(--accent1-color);
+}
 
 
 main {
@@ -82,87 +70,81 @@ main {
     grid-template-columns: 2fr 1fr;
     gap: 1.5rem;
 }
-.card{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap:20px;
-    margin-top: 15px;
-}
-.card1, .card2{
+
+.card {
     background-color: white;
-    padding: 30px;    
-    border-radius:2rem;
+    padding: 30px;
+    border-radius: 2rem;
     border: 1px solid rgb(194, 182, 182);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        }
-
-
-.card1 img{
+.card img {
     width: 250px;
     height: 200px;
     border-radius: 5px;
     float: right;
-    clear: both;
     padding: 10px;
     margin-left: 50px;
 }
 
-figure{
+
+figure {
     float: left;
     margin: 20px;
 }
 
-p{
+p {
     font-size: larger;
     text-align: justify;
     padding: 30px;
-    font-family:Georgia, 'Times New Roman', Times, serif
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .underline-full {
-            position: relative;
-            margin-top: 70px;
-            margin-bottom: 5px;
-            font-family: var(--heading-font);
-            text-align: center;
-            font-size: 30px;
-            border-bottom: 3px solid rgba(32, 27, 27, 0.781);
-            padding-bottom: 2ch;
-            width: 70%;
-        
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    font-family: var(--heading-font);
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 3px solid rgba(32, 27, 27, 0.781);
+    padding-bottom: 5px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h3{
-    font-size: larger;
-
-}
-
-.card2 ul{
-    margin-top: 150px;
-    margin-left: 30px;
-    padding: 50px;
-    font-size: larger;
-}
-
-figcaption{
+figcaption {
     text-align: center;
 }
 
+/* Footer */
 footer {
     font-size: large;
     text-align: center;
     background-color: #0b0b64d7;
     color: white;
-    padding: 5px;
-    
-}
-
-footer p{
-    margin-left: 500px;
+    padding: 10px;
 }
 
 #lastModified {
     color: var(--accent1-color);
     
+}
+
+/* ✅ Responsive Layout */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+    }
+
+    footer p {
+        margin-left: 0;
+    }
 }
