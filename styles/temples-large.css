@@ -8,11 +8,6 @@
 }
 
 
-#menu.show::before {
-    content: "✕";
-}
-
-
 @media (min-width: 769px) {
     #menu {
         display: none;
