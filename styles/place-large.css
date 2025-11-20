@@ -24,6 +24,11 @@
     .card
     .weather-card {
         backdrop-filter:none;
+        position: static;
+        width: 90%;
+        max-width: 400px;
+        margin-top: 0;
+        backdrop-filter: none;
     }
 
 
