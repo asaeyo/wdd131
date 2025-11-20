@@ -56,11 +56,12 @@ h1 {
 
 .hero-overlay {
     position: absolute;
-    inset: 0;
+    top: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 1.2rem;
     gap: 1rem;
 }
 
@@ -71,8 +72,9 @@ h1 {
     border-radius: var(--radius);
     backdrop-filter: blur(6px);
     box-shadow: var(--shadow);
-    width: 35%;
+    width: 25%;
     height: auto;
+    margin-top: 0;
     margin-top: 10rem;
 }
 
@@ -90,7 +92,7 @@ h1 {
     position: absolute;
     bottom: 1.5rem;
     right: 1.5rem;
-    width: 35%;
+    width: 25%;
     }
 
 
