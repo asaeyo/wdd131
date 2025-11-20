@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Site</title>
+    <meta name="description" content="WDD 131 - A place I wish wish to visit and stay in for a season- Asa Eyo Itam-Eyo">
+    <meta name="author" content="Asa Eyo Itam-Eyo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Norway</h1>
+    </header>
+
+    <main>
+        <class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width:1000px)">
+                <source srcset="images/hero-medium.webp" media="(min-width:600px)">
+                <img src="images/hero-small.webp" alt="Scenic view of Norway">
+            </picture>
+    
+        <div class="hero-overlay">    
+
+        <section class="data card">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Capital:</strong> Oslo</li>
+                <li><strong>Population:</strong> 5.4 million</li>
+                <li><strong>Continent:</strong> Europe</li>
+                <li><strong>Language:</strong> Norwegian</li>
+                <li><strong>Currency:</strong> Norwegian Krone (NOK)</li>
+                <li><strong>Time Zone:</strong> CET UTC+1</li>
+                <li><strong>Calling Code:</strong> +47</li>
+                <li><strong>Internet TLD:</strong> .no</li>
+
+
+
+            </ul>
+        </section>
+
+           <section class="weather card">
+                <h2 id="weatherHeading">Weather</h2>
+
+                <div class="weather-mobile-icon">
+                <img src="images/weather.svg" alt="Weather icon">
+                </div>
+
+        <ul>
+          <li><strong>Temperature:</strong> <span id="tempValue">10°C</span></li>
+          <li><strong>Wind Speed:</strong> <span id="windValue">10 km/h</span></li>
+          <li><strong>Wind Chill:</strong> <span id="windChillValue"></span></li>
+        </ul>
+             </section>
+
+        </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>🌹 Asa Eyo Itam-Eyo 🌹 Nigeria.</p>
+    <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>
+
+    

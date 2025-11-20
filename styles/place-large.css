@@ -1,0 +1,17 @@
+
+
+/* Weather heading pseudo icon */
+.weather h2::after {
+    content: " ⛅";
+    /* Emoticon for wide view */
+    font-size: 1.6rem;
+    color: var(--sunset-gold);
+    margin-left: 0.4rem;
+}
+
+/* On desktop the mobile SVG should be hidden */
+@media (min-width: 600px) {
+    .weather-mobile-icon img {
+        display: none;
+    }
+}
