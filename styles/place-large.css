@@ -9,9 +9,40 @@
     margin-left: 0.4rem;
 }
 
-/* On desktop the mobile SVG should be hidden */
+
 @media (min-width: 600px) {
     .weather-mobile-icon img {
         display: none;
     }
+}
+
+@media (max-width: 600px) {
+    .hero-overlay {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-top: 1rem;
+    }
+
+    .weather-card {
+        position: static;
+        width: 90%;
+        margin-top: 1rem;
+    }
+
+    /* Show SVG on mobile */
+    .weather-mobile-icon img {
+        width: 64px;
+        display: block;
+        margin: 0.5rem auto 1rem auto;
+    }
+}
+
+
+.weather-mobile-icon img {
+    display: none;
 }
