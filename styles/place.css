@@ -72,7 +72,7 @@ h1 {
     backdrop-filter: blur(6px);
     box-shadow: var(--shadow);
     width: 25%;
-    height: 40%;
+    height: auto;
     margin-top: 10rem;
 }
 
