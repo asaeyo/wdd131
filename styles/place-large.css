@@ -3,18 +3,12 @@
 /* Weather heading pseudo icon */
 .weather h2::after {
     content: " ⛅";
-    /* Emoticon for wide view */
     font-size: 1.6rem;
     color: var(--sunset-gold);
     margin-left: 0.4rem;
 }
 
 
-@media (min-width: 600px) {
-    .weather-mobile-icon img {
-        display: none;
-    }
-}
 
 @media (max-width: 600px) {
     .hero-overlay {
@@ -35,11 +29,7 @@
         margin-top: 1rem;
     }
 
-    .weather-card {
-        position: static;
-        width: 90%;
-        margin-top: 1rem;
-    }
+
 
     /* Show SVG on mobile */
     .weather-mobile-icon img {
