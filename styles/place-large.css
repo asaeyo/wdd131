@@ -24,7 +24,9 @@
         text-align: center;
     }
 
-    .card {
+    .card
+    .weather-card {
+        position: static;
         width: 90%;
         margin-top: 1rem;
     }
