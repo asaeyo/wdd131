@@ -30,7 +30,8 @@ header {
 /* Navigation */
 .navigation {
     list-style: none;
-    display: none;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 0;
 }
@@ -47,6 +48,12 @@ header {
     color: white;
     text-decoration: none;
     font-weight: 600;
+    padding: 0.5rem 1rem;
+}
+nav ul li a:hover {
+    background-color: #ddd;
+    color: #000;
+    border-radius: 4px;
 }
 
 /* Main */
