@@ -56,7 +56,19 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-/* Main */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
 main {
     padding: 1rem;
 }
