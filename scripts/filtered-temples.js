@@ -1,13 +1,19 @@
-// temples.js
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ==========================
+    // MOBILE MENU
+    // ==========================
     const menuButton = document.querySelector("#menu");
     const navigation = document.querySelector(".navigation");
 
     menuButton.addEventListener("click", (e) => {
         e.preventDefault();
-        menuButton.classList.toggle("show");
         navigation.classList.toggle("show");
     });
+
+    // ==========================
+    // TEMPLE DATA
+    // ==========================
 
     const temples = [
         {
@@ -60,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
         },
 
-        // ---------- Added Temples ----------
+        // Additional required temples
         {
             templeName: "Rome Italy",
             location: "Rome, Italy",
@@ -70,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
             templeName: "Salt Lake Temple",
-            location: "Salt Lake City, Utah, United States",
+            location: "Salt Lake City, Utah, USA",
             dedicated: "1893, April, 6",
             area: 382207,
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-temple/400x250/salt-lake-temple.jpg"
@@ -84,64 +90,67 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    // ------------------- Functions -------------------
-
+    // ==========================
+    // CREATE TEMPLE CARDS
+    // ==========================
     function createTempleCards(filteredTemples) {
         const container = document.querySelector("#temple-cards");
-        container.innerHTML = ""; // clear
+        container.innerHTML = "";
 
         filteredTemples.forEach(temple => {
             const card = document.createElement("section");
             card.classList.add("card");
 
             card.innerHTML = `
-      <h2>${temple.templeName}</h2>
-      <p><strong>Location:</strong> ${temple.location}</p>
-      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-      <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-    `;
+                <h3>${temple.templeName}</h3>
+                <p><strong>Location:</strong> ${temple.location}</p>
+                <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+                <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
+                <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+            `;
 
             container.appendChild(card);
         });
     }
 
-    // Initial load
+    // Load all temples initially
     createTempleCards(temples);
 
-    // ------------------- Navigation Filters -------------------
-
-    document.querySelector("#home").addEventListener("click", () => {
+    // ==========================
+    // FILTER BUTTONS
+    // ==========================
+    document.getElementById("home").addEventListener("click", () => {
         createTempleCards(temples);
+        pageTitle.textContent = "Home";
     });
 
-    document.querySelector("#old").addEventListener("click", () => {
-        createTempleCards(
-            temples.filter(t => parseInt(t.dedicated) < 1900)
-        );
+    document.getElementById("old").addEventListener("click", () => {
+        createTempleCards(temples.filter(t => parseInt(t.dedicated) < 1900));
+        pageTitle.textContent = "Old Temples";
     });
 
-    document.querySelector("#new").addEventListener("click", () => {
-        createTempleCards(
-            temples.filter(t => parseInt(t.dedicated) > 2000)
-        );
+    document.getElementById("new").addEventListener("click", () => {
+        createTempleCards(temples.filter(t => parseInt(t.dedicated) > 2000));
+        pageTitle.textContent = "New Temples";
     });
 
-    document.querySelector("#large").addEventListener("click", () => {
-        createTempleCards(
-            temples.filter(t => t.area > 90000)
-        );
+    document.getElementById("large").addEventListener("click", () => {
+        createTempleCards(temples.filter(t => t.area > 90000));
+        pageTitle.textContent = "Large Temples";
     });
 
-    document.querySelector("#small").addEventListener("click", () => {
-        createTempleCards(
-            temples.filter(t => t.area < 10000)
-        );
+    document.getElementById("small").addEventListener("click", () => {
+        createTempleCards(temples.filter(t => t.area < 10000));
+        pageTitle.textContent = "Small Temples";
     });
 
-    // ------------------- Footer Data -------------------
+    document.getElementById("nonutah").addEventListener("click", () => {
+        createTempleCards(temples.filter(t => !t.location.includes("Utah")));
+        pageTitle.textContent = "Non-Utah Temples";
+    });
 
-    // Footer year and last modified
+    document.querySelector("res-grid").appendChild(card);
+    
     document.getElementById("currentyear").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent =
         "Last Modified: " + document.lastModified;

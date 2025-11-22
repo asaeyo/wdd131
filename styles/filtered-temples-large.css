@@ -1,0 +1,16 @@
+@media screen and (min-width: 800px) {
+
+    .navigation {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
