@@ -21,14 +21,17 @@
         padding: 1rem;
     }
 
-    .card
-    .weather-card {
-        backdrop-filter:none;
-        position: static;
-        width: 90%;
-        max-width: 400px;
-        margin-top: 0;
-        backdrop-filter: none;
+    .weather h2::after {
+         content: "";
+        }
+
+     .card,
+     .weather-card {
+         width: 90%;
+         max-width: 400px;
+         margin: 0 auto;
+         backdrop-filter: none;
+         position: static;
     }
 
 
@@ -42,7 +45,4 @@
 }
 
 
-.weather-mobile-icon img {
-    display: none;
-}
 
