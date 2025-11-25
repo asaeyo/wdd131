@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan - UCTH</title>
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="images/ucthlogo.jpg" alt="UCTH Logo" class="logo">
+        <h1>University of Calabar Teaching Hospital</h1>
+    </header>
+
+    <main>
+        <!-- Site Name -->
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>University of Calabar Teaching Hospital (UCTH)</strong></p>
+            <p>This website is dedicated to providing patients, staff, and the public with information about the
+                hospital’s services, facilities, and healthcare resources. It will also create channels for easy access to specialist care, research and training opportunities</p>
+            <p>Optional domain availability: ucth.edu.ng</p>
+        </section>
+
+        <!-- Site Purpose -->
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The website serves as a central hub for hospital information, appointment booking, patient resources,
+                research updates, services offered and access to it, updates on events in the hospital.</p>
+        </section>
+
+        <!-- Scenarios -->
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li>How can I schedule an appointment with a specialist at UCTH?</li>
+                <li>Where can I find information about available medical services and departments?</li>
+                <li>How do I contact hospital administration or staff?</li>
+                <li>How do I book for procedures or test offered in the hospital</li>
+                <li>How do I access research/training opportunities available in the hospital?</li>
+                <li>What are the upcoming events for learning, and access to at subsidized rates? </li>
+
+            </ul>
+        </section>
+
+        <!-- Color Schema -->
+        <section>
+            <h2>Color Schema</h2>
+            <ul class="colors">
+                <li class="color-primary">Primary Color: Deep Green (#2e7d32) — headers, nav bar, footer</li>
+                <li class="color-accent">Accent Color: Mint Green (#81c784) — buttons, highlights, callouts</li>
+            </ul>
+        </section>
+
+        <!-- Typography -->
+        <section>
+            <h2>Typography</h2>
+            <ul>
+                <li><strong>Playfair Display</strong> — used for headings (h1, h2, h3)</li>
+                <li><strong>Open Sans</strong> — used for body text, paragraphs, and lists</li>
+            </ul>
+        </section>
+
+        <!-- Wireframe -->
+        <section>
+            <h2>Wireframe</h2>
+            <p>Below are sketches of the home page layout:</p>
+            <div class="wireframes">
+                <div class="wireframe">
+                    <h3>Mobile View</h3>
+                    <img src="images/wireframe-mobile.webp" alt="Wireframe Mobile View">
+                </div>
+                <div class="wireframe">
+                    <h3>Desktop/Wide View</h3>
+                    <img src="images/wireframe-desktop.webp" alt="Wireframe Desktop View">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🏥 University of Calabar Teaching Hospital 🏥</p>
+        <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+
+</body>
+
+</html>
