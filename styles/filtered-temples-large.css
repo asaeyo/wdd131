@@ -1,17 +1,6 @@
 @media (min-width: 800px) {
 
-    #pageTitle .weather-icon {
-            display: none;
-        }
-    
-    #pageTitle::after {
-            content: " ❄️";
-            font-size: 1.6rem;
-            margin-left: .5rem;
-            vertical-align: middle;
-        }
-    
-    nav ul.navigation {
+    .navigation {
         display: flex;
         flex-direction: row;
         gap: 1rem;
