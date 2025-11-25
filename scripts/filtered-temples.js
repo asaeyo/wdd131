@@ -3,9 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================
     // MOBILE MENU
     // ==========================
+    const pageTitle = document; querySelector("#pageTitle");
+
     const menuButton = document.querySelector("#menu");
     const navigation = document.querySelector(".navigation");
-
+   
     menuButton.addEventListener("click", (e) => {
         e.preventDefault();
         navigation.classList.toggle("show");
@@ -149,8 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
         pageTitle.textContent = "Non-Utah Temples";
     });
 
-    document.querySelector("res-grid").appendChild(card);
-    
+        
     document.getElementById("currentyear").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent =
         "Last Modified: " + document.lastModified;
