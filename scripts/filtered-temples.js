@@ -3,15 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================
     // MOBILE MENU
     // ==========================
-    
 
     const menuButton = document.querySelector("#menu");
     const navigation = document.querySelector(".navigation");
-   
+
     menuButton.addEventListener("click", (e) => {
         e.preventDefault();
         navigation.classList.toggle("show");
     });
+
+    const pageTitle = document.getElementById("pageTitle");
 
     // ==========================
     // TEMPLE DATA
@@ -67,34 +68,47 @@ document.addEventListener("DOMContentLoaded", () => {
             area: 116642,
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
         },
+        {
+            templeName: "Bern Switzerland",
+            location: "Bern, Switzerland",
+            dedicated: "1955, September, 11",
+            area: 11500,
+            imageUrl: "https://assets.churchofjesuschrist.org/f1/55/f1555f230ec3d5e1dcd67b5f138e073d98e2e9d5/bern_switzerland_temple.jpeg"
+        },
+        {
+            templeName: "Fukuoka Japan",
+            location: "Fukuoka, Japan",
+            dedicated: "2000, June, 11",
+            area: 10110,
+            imageUrl: "https://assets.churchofjesuschrist.org/2f/42/2f42d89a8b6c93f8c05c512416826c6f48a0d24b/fukuoka_japan_temple.jpeg"
+        },
+        {
+            templeName: "Kinshasa Democratic Republic of Congo",
+            location: "Kinshasa, DRC",
+            dedicated: "2019, April, 14",
+            area: 13500,
+            imageUrl: "https://assets.churchofjesuschrist.org/fc/34/fc34fcb4352f4201c8f06e2b8f836bb0fb92da1f/kinshasa_drc_temple.jpeg"
+        },
+        {
+            templeName: "Lisbon Portugal",
+            location: "Lisbon, Portugal",
+            dedicated: "2019, June, 17",
+            area: 21280,
+            imageUrl: "https://assets.churchofjesuschrist.org/41/69/41695b3ff2d1551e0a22f5b99e77c422e946e546/lisbon_portugal_temple.jpeg"
+        },
+        {
+            templeName: "Nairobi Kenya",
+            location: "Nairobi, Kenya",
+            dedicated: "2019, October, 13",
+            area: 10320,
+            imageUrl: "https://assets.churchofjesuschrist.org/1b/87/1b87ef3f0cb29e8efb7da1f37f88b365bb1d3b6a/nairobi_kenya_temple.jpeg"
+        },
 
-        // Additional required temples
-        {
-            templeName: "Rome Italy",
-            location: "Rome, Italy",
-            dedicated: "2019, March, 10",
-            area: 41000,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-exterior.jpg"
-        },
-        {
-            templeName: "Salt Lake Temple",
-            location: "Salt Lake City, Utah, USA",
-            dedicated: "1893, April, 6",
-            area: 382207,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-temple/400x250/salt-lake-temple.jpg"
-        },
-        {
-            templeName: "Tokyo Japan",
-            location: "Tokyo, Japan",
-            dedicated: "1980, October, 27",
-            area: 53997,
-            imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple.jpg"
-        }
-    ];
 
     // ==========================
     // CREATE TEMPLE CARDS
     // ==========================
+
     function createTempleCards(filteredTemples) {
         const container = document.querySelector("#temple-cards");
         container.innerHTML = "";
@@ -121,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================
     // FILTER BUTTONS
     // ==========================
+
     document.getElementById("home").addEventListener("click", () => {
         createTempleCards(temples);
         pageTitle.textContent = "Home";
@@ -151,8 +166,12 @@ document.addEventListener("DOMContentLoaded", () => {
         pageTitle.textContent = "Non-Utah Temples";
     });
 
-        
+    // ==========================
+    // FOOTER INFO
+    // ==========================
+
     document.getElementById("currentyear").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent =
         "Last Modified: " + document.lastModified;
+
 });

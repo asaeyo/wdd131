@@ -4,6 +4,10 @@
         display: flex;
         flex-direction: row;
         gap: 1rem;
+        align-items: center;
+        background: none;
+        padding: 0;
+        
     }
 
     .menu-button {
