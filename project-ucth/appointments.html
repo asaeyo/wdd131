@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - UCTH</title>
+    <link rel="stylesheet" href="styles/projectucth.css">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo-container">
+            <img src="images/ucthlogo.jpg" alt="UCTH Logo" class="logo">
+            <h1>University of Calabar Teaching Hospital</h1>
+            <button class="hamburger" id="hamburger">☰</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="appointments.html" class="active">Appointments</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Available Departments</h1>
+        
+        <section class="departments">
+            <figure>
+                <img src="images/ucthicu.jpg" alt="UCTH anaesthesia">
+                <figcaption>Department of Anaesthesia</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/ucthurologyclinic.jpg" alt="UCTH urology clinic">
+                <figcaption>Department of Surgery</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/ucthmri.jpg" alt="UCTH radiology">
+                <figcaption>Department of Radiology</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/endoscopy.jpg" alt="Endoscopy Unit">
+                <figcaption>Department of Internal Medicine</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/surgery.webp" alt="Theatre">
+                <figcaption>Department of Surgery</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/ucthfammed.jpg" alt="Family medicine">
+                <figcaption>Department of Family Medicine</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/obsandgyn.webp" alt="Obstetrics and Gynecology">
+                <figcaption>Department of Obstetrics and Gynecology</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/orthopedics.jpg" alt="Orthopedics">
+                <figcaption>Department of Orthopedics</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="images/paediatrics.webp" alt="Pediatrics">
+                <figcaption>Department of Paediatrics</figcaption>
+            </figure>
+            
+        </section>
+
+        <section class="appointments">
+            <h1>Book an Appointment</h1>
+            <p>Schedule your appointment with our specialists easily using the form below.</p>
+            <form id="appointmentForm" class="form-card">
+                <input type="text" name="patientName" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="date" name="appointmentDate" required>
+                <select name="department" required>
+                    <option value="">Select Department</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Orthopedics">Orthopedics</option>
+                    <option value="Pediatrics">Pediatrics</option>
+                    <option value="Oncology">Oncology</option>
+                    <option value="Obstetrics & Gynecology">Obstetrics & Gynecology</option>
+                    <option value="Psychiatry">Psychiatry</option>
+                </select>
+
+                <label>Preferred Appointment Date</label>
+                <input type="date" id="date" required>
+
+                <button type="submit">Book Appointment</button>
+
+                <p id="formMessage" class="success"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>🏥 University of Calabar Teaching Hospital 🏥</p>
+        <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
