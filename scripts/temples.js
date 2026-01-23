@@ -141,8 +141,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ------------------- Footer Data -------------------
 
-    // Footer year and last modified
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent =
-        "Last Modified: " + document.lastModified;
-});
+    const currentYear = new Date().getFullYear();
+    document.getElementById("currentyear").textContent = currentYear;
+
+    // Last modified date
+    const lastModified = new Date(document.lastModified);
+    const options = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+        timeZoneName: "short"
+    };
+    document.getElementById("lastModified").textContent = lastModified.toLocaleString("en-US", options);
