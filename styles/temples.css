@@ -139,8 +139,13 @@ figcaption {
 
 
 footer {
-    background-color: darkslateblue;
+    background-color: #4b0f6b;
     color: white;
     text-align: center;
     padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
 }

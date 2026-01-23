@@ -1,14 +1,19 @@
 // temples.js
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ------------------- Menu Toggle -------------------
     const menuButton = document.querySelector("#menu");
     const navigation = document.querySelector(".navigation");
 
-    menuButton.addEventListener("click", (e) => {
-        e.preventDefault();
-        menuButton.classList.toggle("show");
-        navigation.classList.toggle("show");
-    });
+    if (menuButton && navigation) {
+        menuButton.addEventListener("click", (e) => {
+            e.preventDefault();
+            menuButton.classList.toggle("show");
+            navigation.classList.toggle("show");
+        });
+    }
 
+    // ------------------- Temple Data -------------------
     const temples = [
         {
             templeName: "Aba Nigeria",
@@ -59,8 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
             area: 116642,
             imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
         },
-
-        // ---------- Added Temples ----------
         {
             templeName: "Rome Italy",
             location: "Rome, Italy",
@@ -84,23 +87,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    // ------------------- Functions -------------------
-
+    // ------------------- Create Cards -------------------
     function createTempleCards(filteredTemples) {
         const container = document.querySelector("#temple-cards");
-        container.innerHTML = ""; // clear
+        if (!container) return;
+
+        container.innerHTML = "";
 
         filteredTemples.forEach(temple => {
             const card = document.createElement("section");
             card.classList.add("card");
 
             card.innerHTML = `
-      <h2>${temple.templeName}</h2>
-      <p><strong>Location:</strong> ${temple.location}</p>
-      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-      <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-    `;
+                <h2>${temple.templeName}</h2>
+                <p><strong>Location:</strong> ${temple.location}</p>
+                <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+                <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+                <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+            `;
 
             container.appendChild(card);
         });
@@ -110,50 +114,44 @@ document.addEventListener("DOMContentLoaded", () => {
     createTempleCards(temples);
 
     // ------------------- Navigation Filters -------------------
-
-    document.querySelector("#home").addEventListener("click", () => {
+    document.querySelector("#home")?.addEventListener("click", () => {
         createTempleCards(temples);
     });
 
-    document.querySelector("#old").addEventListener("click", () => {
-        createTempleCards(
-            temples.filter(t => parseInt(t.dedicated) < 1900)
-        );
+    document.querySelector("#old")?.addEventListener("click", () => {
+        createTempleCards(temples.filter(t => parseInt(t.dedicated) < 1900));
     });
 
-    document.querySelector("#new").addEventListener("click", () => {
-        createTempleCards(
-            temples.filter(t => parseInt(t.dedicated) > 2000)
-        );
+    document.querySelector("#new")?.addEventListener("click", () => {
+        createTempleCards(temples.filter(t => parseInt(t.dedicated) > 2000));
     });
 
-    document.querySelector("#large").addEventListener("click", () => {
-        createTempleCards(
-            temples.filter(t => t.area > 90000)
-        );
+    document.querySelector("#large")?.addEventListener("click", () => {
+        createTempleCards(temples.filter(t => t.area > 90000));
     });
 
-    document.querySelector("#small").addEventListener("click", () => {
-        createTempleCards(
-            temples.filter(t => t.area < 10000)
-        );
+    document.querySelector("#small")?.addEventListener("click", () => {
+        createTempleCards(temples.filter(t => t.area < 10000));
     });
 
     // ------------------- Footer Data -------------------
+    const currentYearEl = document.getElementById("currentyear");
+    if (currentYearEl) {
+        currentYearEl.textContent = new Date().getFullYear();
+    }
 
-    const currentYear = new Date().getFullYear();
-    document.getElementById("currentyear").textContent = currentYear;
+    const lastModifiedEl = document.getElementById("lastModified");
+    if (lastModifiedEl) {
+        lastModifiedEl.textContent = new Date(document.lastModified)
+            .toLocaleString("en-US", {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                hour12: false
+            });
+    }
 
-    // Last modified date
-    const lastModified = new Date(document.lastModified);
-    const options = {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-        hour: "numeric",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true,
-        timeZoneName: "short"
-    };
-    document.getElementById("lastModified").textContent = lastModified.toLocaleString("en-US", options);
+});
