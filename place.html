@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and Location Page</title>
+    <link rel="stylesheet" href="place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="place.js" defer></script>
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <h1>Norland </h1>
+    </header>
+
+    <!-- Hero Section with Responsive Images -->
+    <section id="hero">
+        <picture>
+            <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+            <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+            <img src="images/hero-large.webp" alt="Norland Landscape" loading="lazy">
+        </picture>
+    </section>
+
+    <!-- Overlay content -->
+    <div class="hero-overlay">
+    
+        <!-- LEFT: Data -->
+        <section class="card data">
+            <h2>About Norland</h2>
+            <ul>
+                <li><strong>Country:</strong> Norway</li>
+                <li><strong>State:</strong> Oslo</li>
+                <li><strong>Population:</strong> 5.5 million</li>
+                <li><strong>Language:</strong> Norwegian</li>
+                <li><strong>Currency:</strong> Norwegian Krone (NOK)</li>
+            </ul>
+        </section>
+    
+        <!-- RIGHT: Weather -->
+        <section class="card weather">
+            <h2>Weather ⛅</h2>
+            <ul>
+                <li><strong>Temperature:</strong> <span id="temperature">28</span>°C</li>
+                <li><strong>Wind Speed:</strong> <span id="windSpeed">10</span> km/h</li>
+                <li><strong>Condition:</strong> Partly Cloudy</li>
+                <li><strong>Wind Chill:</strong> <span id="windChill"></span></li>
+            </ul>
+        </section>
+    
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Asa Itam-Eyo| Nigeria </p>
+
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
