@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review Form</title>
-    <meta name="description" content="WDD 131 - Product Review Form- Asa Eyo Itam-Eyo">
+    <meta name="description"
+        content="Submit a detailed product review including rating, features, and comments for WDD 131 assignment.">
     <meta name="author" content="Asa Eyo Itam-Eyo">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
 
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles/form.css">
-   
+
+    <!-- External JS -->
     <script src="scripts/form.js" defer></script>
 </head>
 
@@ -30,7 +35,7 @@
             <label for="product">Product Name</label>
             <select id="product" name="product" required>
                 <option value="" disabled selected>Select a Product ...</option>
-                <!-- Options will be inserted with JavaScript -->
+                <!-- Options inserted with JavaScript -->
             </select>
 
             <!-- OVERALL RATING -->
@@ -71,10 +76,10 @@
             <fieldset>
                 <legend>Useful Features (check all that apply)</legend>
 
-                <label><input type="checkbox" id="feat1" name="features" value="durability"> Durability</label>
-                <label><input type="checkbox" id="feat2" name="features" value="ease of use"> Ease of Use</label>
-                <label><input type="checkbox" id="feat3" name="features" value="performance"> Performance</label>
-                <label><input type="checkbox" id="feat4" name="features" value="design"> Design</label>
+                <label><input type="checkbox" id="feat1" name="features[]" value="durability"> Durability</label>
+                <label><input type="checkbox" id="feat2" name="features[]" value="ease of use"> Ease of Use</label>
+                <label><input type="checkbox" id="feat3" name="features[]" value="performance"> Performance</label>
+                <label><input type="checkbox" id="feat4" name="features[]" value="design"> Design</label>
             </fieldset>
 
             <!-- WRITTEN REVIEW -->
@@ -97,6 +102,12 @@
         </p>
         <p id="lastModified"></p>
     </footer>
+
+    <script>
+        // Populate current year and last modified date
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+    </script>
 </body>
 
 </html>
