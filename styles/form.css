@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
+}
+
+header,
+footer {
+    background: #2a4d69;
+    color: white;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+main {
+    max-width: 700px;
+    margin: auto;
+    padding: 1.2rem;
+}
+
+form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid #ccc;
+    padding: 0.6rem;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+
+
+legend {
+    font-weight: bold;
+}
+
+.submit-btn {
+    background: #4b86b4;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #3b6f92;
+}
+
+/* Mobile-first responsive improvement */
+@media (min-width: 600px) {
+    form {
+        padding: 2rem;
+    }
+}
