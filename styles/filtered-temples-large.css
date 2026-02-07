@@ -1,0 +1,20 @@
+@media (min-width: 800px) {
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        background: none;
+        padding: 0;
+
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
