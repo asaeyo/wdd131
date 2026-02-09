@@ -1,5 +1,5 @@
 // HAMBURGER MENU
-const hamburger = document.getElementById("hamburger");
+/*const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 
 hamburger.addEventListener("click", () => {
@@ -179,4 +179,72 @@ if (form) {
 
         form.reset();
     });
+}*/
+
+
+// FOOTER DATES
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
+
+// NAV TOGGLE
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.querySelector("ul").classList.toggle("open");
+});
+
+// APPOINTMENTS
+const form = document.getElementById("appointmentForm");
+const message = document.getElementById("message");
+const appointmentList = document.getElementById("appointmentList");
+
+let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+
+function saveAppointment(appointment) {
+    appointments.push(appointment);
+    localStorage.setItem("appointments", JSON.stringify(appointments));
 }
+
+function displayAppointments() {
+    appointmentList.innerHTML = "";
+
+    if (appointments.length === 0) {
+        appointmentList.innerHTML = `<p>No appointments booked yet.</p>`;
+        return;
+    }
+
+    appointments.forEach(app => {
+        appointmentList.innerHTML += `
+      <div class="appointment-item">
+        <p><strong>${app.name}</strong> - ${app.department}</p>
+        <p>${app.date}</p>
+      </div>
+    `;
+    });
+}
+
+form.addEventListener("submit", event => {
+    event.preventDefault();
+
+    const appointment = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        department: document.getElementById("department").value,
+        date: document.getElementById("date").value
+    };
+
+    if (!appointment.department) {
+        message.textContent = "Please select a department.";
+        return;
+    }
+
+    saveAppointment(appointment);
+    displayAppointments();
+
+    message.textContent = `Appointment booked successfully for ${appointment.name}!`;
+    form.reset();
+});
+
+// INITIAL DISPLAY
+displayAppointments();

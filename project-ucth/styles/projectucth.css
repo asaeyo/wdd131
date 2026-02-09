@@ -1,4 +1,4 @@
-* {
+/* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +12,7 @@ body {
 }
 
 /* Header */
-header {
+/*header {
     background-color: #2e7d32;
     display: flex;
     justify-content: space-between;
@@ -57,7 +57,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Main */
+/* 
 main {
     max-width: 100%;
     margin: 2rem auto;
@@ -67,7 +67,7 @@ main {
 
 }
 
-/* Hero Section */
+/* Hero Section 
 .hero {
     text-align: center;
     margin-bottom: 2rem;
@@ -132,7 +132,7 @@ figure:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* Image styles */
+/* Image styles 
 img {
     width: 100%;
     height: 350px;
@@ -147,7 +147,7 @@ figcaption {
     color: #333;
 }
 
-/* Features */
+/* Features 
 
 .features{
     border: 1px solid black;
@@ -162,7 +162,7 @@ figcaption {
     
 }
 
-/* Forms */
+/* Forms 
 
 .appointments{
     margin-top: 50px;
@@ -231,12 +231,12 @@ button:hover {
     border-color: red;
 }
 
-/* Hidden */
+/* Hidden 
 .hidden {
     display: none;
 }
 
-/* Mobile menu */
+/* Mobile menu 
 .hamburger {
     background: none;
     border: none;
@@ -271,7 +271,7 @@ button:hover {
     }
 }
 
-/* Footer */
+/* Footer 
 footer {
     background-color: #2e7d32;
     color: white;
@@ -292,7 +292,7 @@ footer {
     height: 20px;
 }
 
-/* Responsive */
+/* Responsive 
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -301,5 +301,184 @@ footer {
 
     header .logo-container {
         flex-direction: column;
+    }
+} */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+.site-header {
+    background-color: #0d47a1;
+    color: #fff;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo {
+    width: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: none;
+    background-color: #0d47a1;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #26a69a;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* MAIN */
+main {
+    padding: 1rem;
+}
+
+h1,
+h2 {
+    margin-bottom: 1rem;
+}
+
+h1{
+    text-align: center;
+}
+
+/* DEPARTMENTS */
+.department-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+figure {
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* FORM */
+.form-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    max-width: 500px;
+}
+
+.form-card label {
+    display: block;
+    margin-top: 0.8rem;
+}
+
+.form-card input,
+.form-card select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+.form-card button {
+    margin-top: 1rem;
+    padding: 0.7rem;
+    background-color: #26a69a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.form-card button:hover {
+    background-color: #1e8e82;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0d47a1;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .department-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.department-grid {
+    display: grid;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.department-grid figure {
+    display: flex;
+    flex-direction: column;
+}
+
+.department-grid figcaption {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* Force all department images to equal size */
+.department-grid img {
+    width: 100%;
+    height: 220px;
+    /* uniform height */
+    object-fit: cover;
+    /* crop without stretching */
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .department-grid img {
+        height: 260px;
     }
 }

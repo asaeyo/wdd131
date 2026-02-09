@@ -4,19 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appointments - UCTH</title>
+    <title>Appointments | UCTH</title>
+
     <link rel="stylesheet" href="styles/projectucth.css">
+    <script src="scripts/main.js"></script>
 </head>
 
 <body>
-    <!-- Header / Navigation -->
-    <header>
-        <div class="logo-container">
-            <img src="images/ucthlogo.jpg" alt="UCTH Logo" class="logo">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-content">
+            <img src="images/ucthlogo.jpg" alt="University of Calabar Teaching Hospital logo" class="logo"
+                loading="lazy">
             <h1>University of Calabar Teaching Hospital</h1>
-            <button class="hamburger" id="hamburger">☰</button>
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation">☰</button>
         </div>
-        <nav>
+
+        <nav id="navMenu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -26,92 +30,80 @@
         </nav>
     </header>
 
+    <!-- MAIN -->
     <main>
-        <h1>Available Departments</h1>
-        
+        <h1>Appointments</h1>
+
+        <!-- DEPARTMENTS -->
         <section class="departments">
-            <figure>
-                <img src="images/ucthicu.jpg" alt="UCTH anaesthesia">
-                <figcaption>Department of Anaesthesia</figcaption>
-            </figure>
-            
-            <figure>
-                <img src="images/ucthurologyclinic.jpg" alt="UCTH urology clinic">
-                <figcaption>Department of Surgery</figcaption>
-            </figure>
-            
-            <figure>
-                <img src="images/ucthmri.jpg" alt="UCTH radiology">
-                <figcaption>Department of Radiology</figcaption>
-            </figure>
-            
-            <figure>
-                <img src="images/endoscopy.jpg" alt="Endoscopy Unit">
-                <figcaption>Department of Internal Medicine</figcaption>
-            </figure>
-            
-            <figure>
-                <img src="images/surgery.webp" alt="Theatre">
-                <figcaption>Department of Surgery</figcaption>
-            </figure>
-            
-            <figure>
-                <img src="images/ucthfammed.jpg" alt="Family medicine">
-                <figcaption>Department of Family Medicine</figcaption>
-            </figure>
-            
-            <figure>
-                <img src="images/obsandgyn.webp" alt="Obstetrics and Gynecology">
-                <figcaption>Department of Obstetrics and Gynecology</figcaption>
-            </figure>
-            
-            <figure>
-                <img src="images/orthopedics.jpg" alt="Orthopedics">
-                <figcaption>Department of Orthopedics</figcaption>
-            </figure>
-            
-            <figure>
-                <img src="images/paediatrics.webp" alt="Pediatrics">
-                <figcaption>Department of Paediatrics</figcaption>
-            </figure>
-            
+            <h2>Available Departments</h2>
+
+            <div class="department-grid">
+                <figure>
+                    <img src="images/ucthicu.jpg" alt="Department of Anaesthesia" loading="lazy">
+                    <figcaption>Anaesthesia</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/ucthurologyclinic.jpg" alt="Department of Surgery" loading="lazy">
+                    <figcaption>Surgery</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/ucthmri.jpg" alt="Radiology department" loading="lazy">
+                    <figcaption>Radiology</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/paediatrics.webp" alt="Paediatrics department" loading="lazy">
+                    <figcaption>Paediatrics</figcaption>
+                </figure>
+            </div>
         </section>
 
+        <!-- APPOINTMENT FORM -->
         <section class="appointments">
-            <h1>Book an Appointment</h1>
-            <p>Schedule your appointment with our specialists easily using the form below.</p>
+            <h2>Book an Appointment</h2>
+            <p>Fill out the form below to schedule an appointment with one of our specialists.</p>
+
             <form id="appointmentForm" class="form-card">
-                <input type="text" name="patientName" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="date" name="appointmentDate" required>
-                <select name="department" required>
-                    <option value="">Select Department</option>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+
+                <label for="department">Department</label>
+                <select id="department" required>
+                    <option value="">Select a department</option>
                     <option value="Cardiology">Cardiology</option>
                     <option value="Neurology">Neurology</option>
                     <option value="Orthopedics">Orthopedics</option>
-                    <option value="Pediatrics">Pediatrics</option>
-                    <option value="Oncology">Oncology</option>
+                    <option value="Paediatrics">Paediatrics</option>
                     <option value="Obstetrics & Gynecology">Obstetrics & Gynecology</option>
-                    <option value="Psychiatry">Psychiatry</option>
                 </select>
 
-                <label>Preferred Appointment Date</label>
+                <label for="date">Preferred Appointment Date</label>
                 <input type="date" id="date" required>
 
                 <button type="submit">Book Appointment</button>
-
-                <p id="formMessage" class="success"></p>
+                <p id="message"></p>
             </form>
+
+            <div id="appointmentList"></div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
         <p>🏥 University of Calabar Teaching Hospital 🏥</p>
-        <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+        <p>
+            &copy; <span id="year"></span> |
+            Last Modified: <span id="lastModified"></span> |
+            <a href="references.html">References</a>
+        </p>
     </footer>
 
-    <script src="scripts/main.js"></script>
 </body>
 
 </html>
