@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Calabar Teaching Hospital</title>
+    <link rel="stylesheet" href="styles/projectucth.css">
+    <script src="scripts/projectucth.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-content">
+            <img src="images/ucthlogo.jpg" alt="UCTH logo" class="logo">
+            <h1>University of Calabar Teaching Hospital</h1>
+            <button class="hamburger" id="hamburger" aria-expanded="false">☰</button>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="research.html">Research</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="home-layout">
+
+        <!-- SIDEBAR: SERVICES -->
+        <aside class="services-sidebar">
+            <h2>Services</h2>
+            <ul>
+                <li><a href="#">Outpatient Care</a></li>
+                <li><a href="#">Emergency Services</a></li>
+                <li><a href="#">Surgery</a></li>
+                <li><a href="#">Diagnostics</a></li>
+                <li><a href="#">Pharmacy</a></li>
+            </ul>
+        </aside>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <img src="images/hero.jpg" srcset="images/hero@2x.jpg 2x, images/hero@3x.jpg 3x"
+                alt="University of Calabar Teaching Hospital complex" loading="lazy">
+
+            <div class="hero-overlay">
+                <h2>Excellence in Healthcare & Medical Training</h2>
+                <p>Providing advanced diagnostic, surgical, and specialist care with compassion.</p>
+                <a href="appointments.html" class="cta-btn">Book an Appointment</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- NEWS SECTION -->
+    <section class="news">
+        <h2>News & Updates</h2>
+        <div id="newsContainer">
+            <!-- Populated dynamically by JS -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> University of Calabar Teaching Hospital. All Rights Reserved.</p>
+            <nav aria-label="Footer Navigation">
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+
+</html>

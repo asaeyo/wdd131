@@ -4,29 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - UCTH</title>
-    <meta name="description" content="WDD 131 - A guide to University of Calabar Teaching Hospital- Asa Eyo Itam-Eyo">
+    <title>Services - University of Calabar Teaching Hospital</title>
+
+    <meta name="description"
+        content="Explore healthcare services and specialist departments at University of Calabar Teaching Hospital (UCTH).">
     <meta name="author" content="Asa Eyo Itam-Eyo">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
-    
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/projectucth.css">
     <link rel="stylesheet" href="styles/projectucth-large.css">
+
+    <!-- JS -->
     <script src="scripts/projectucth.js" defer></script>
 </head>
 
 <body>
-    <!-- Header / Navigation -->
+
+    <!-- HEADER -->
     <header>
         <div class="logo-container">
             <img src="images/ucthlogo.jpg" alt="UCTH Logo" class="logo">
             <h1>University of Calabar Teaching Hospital</h1>
-            <button class="hamburger" id="hamburger">☰</button>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
         </div>
-        <nav>
+
+        <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html" class="active">Services</a></li>
@@ -36,42 +48,75 @@
         </nav>
     </header>
 
+    <!-- MAIN -->
     <main>
-        <section class="services">
-            <h2>Our Services</h2>
-            <p>UCTH provides a wide range of healthcare services to support patients and the community:</p>
-            <ul>
-                <li>Outpatient Consultations</li>
-                <li>Inpatient Care</li>
-                <li>Emergency Services</li>
-                <li>Surgical Procedures</li>
-                <li>Laboratory & Diagnostic Services</li>
-                <li>Research & Training Programs</li>
-                <li>Health Education & Awareness Programs</li>
-            </ul>
+
+        <section class="services-intro">
+            <h2>Our Healthcare Services</h2>
+            <p>
+                University of Calabar Teaching Hospital provides comprehensive medical,
+                surgical, and specialist healthcare services to patients across Nigeria.
+            </p>
         </section>
 
-        <section class="service-details">
-            <h2>Specialist Departments</h2>
-            <ul>
-                <li>Cardiology</li>
-                <li>Neurology</li>
-                <li>Orthopedics</li>
-                <li>Pediatrics</li>
-                <li>Oncology</li>
-                <li>Obstetrics & Gynecology</li>
-                <li>Psychiatry</li>
-            </ul>
+        <!-- SERVICES GRID -->
+        <section class="services-grid">
+
+            <div class="service-card">
+                <h3>Outpatient Consultations</h3>
+                <p>Specialist clinics providing diagnosis and treatment without hospital admission.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Emergency Services</h3>
+                <p>24/7 emergency care for critical and urgent medical conditions.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Surgical Procedures</h3>
+                <p>Advanced surgical services including minimally invasive and major operations.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Laboratory & Diagnostics</h3>
+                <p>Modern diagnostic imaging and laboratory testing facilities.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Inpatient Care</h3>
+                <p>Comprehensive patient admission and recovery services.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Research & Training</h3>
+                <p>Medical research and professional training programs for healthcare development.</p>
+            </div>
+
         </section>
+
+        <!-- SPECIALIST DEPARTMENTS -->
+        <section class="departments">
+            <h2>Specialist Departments</h2>
+
+            <div class="departments-grid">
+                <div>Cardiology</div>
+                <div>Neurology</div>
+                <div>Orthopedics</div>
+                <div>Pediatrics</div>
+                <div>Oncology</div>
+                <div>Obstetrics & Gynecology</div>
+                <div>Psychiatry</div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
         <p>🏥 University of Calabar Teaching Hospital 🏥</p>
         <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
     </footer>
 
-    <script src="scripts/main.js"></script>
 </body>
 
 </html>
